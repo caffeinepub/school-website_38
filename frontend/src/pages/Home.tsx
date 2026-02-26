@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowRight, BookOpen, Users, Award, Star, Bell, Trophy, Calendar } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Award, Star, Bell, Trophy, Calendar, ImageIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useGetAllNews } from '@/hooks/useQueries';
@@ -40,15 +40,15 @@ const announcements = [
     icon: Calendar,
     type: 'Upcoming Event',
     text: 'Annual Sports Meet Registration is Open!',
-    color: 'text-school-amber',
-    bg: 'bg-school-amber/10',
+    color: 'text-school-red',
+    bg: 'bg-school-red/10',
   },
   {
     icon: Bell,
     type: 'Notice',
     text: 'Term 1 Examination Schedules Released.',
-    color: 'text-school-indigo',
-    bg: 'bg-school-indigo/10',
+    color: 'text-school-blue',
+    bg: 'bg-school-blue/10',
   },
   {
     icon: Trophy,
@@ -72,6 +72,45 @@ const testimonials = [
   },
 ];
 
+const galleryImages = [
+  {
+    src: '/assets/generated/school-entrance-hero.dim_1200x600.jpg',
+    alt: "Doon's Public School Entrance",
+    caption: 'School Entrance',
+    isPlaceholder: false,
+  },
+  {
+    src: '/assets/generated/campus-corridor.dim_800x600.jpg',
+    alt: "Doon's Public School Campus Corridor",
+    caption: 'Campus Corridor',
+    isPlaceholder: false,
+  },
+  {
+    src: null,
+    alt: 'Playground',
+    caption: 'Sports Ground',
+    isPlaceholder: true,
+  },
+  {
+    src: null,
+    alt: 'Library',
+    caption: 'School Library',
+    isPlaceholder: true,
+  },
+  {
+    src: null,
+    alt: 'Science Lab',
+    caption: 'Science Laboratory',
+    isPlaceholder: true,
+  },
+  {
+    src: null,
+    alt: 'Assembly',
+    caption: 'Morning Assembly',
+    isPlaceholder: true,
+  },
+];
+
 export default function Home() {
   const { data: newsItems, isLoading: newsLoading } = useGetAllNews();
 
@@ -81,17 +120,17 @@ export default function Home() {
       <section className="relative min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/assets/generated/hero-banner.dim_1440x600.png"
-            alt="Doon's Public School Campus"
-            className="w-full h-full object-cover"
+            src="/assets/generated/school-entrance-hero.dim_1200x600.jpg"
+            alt="Doon's Public School Campus Entrance"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-school-indigo-dark/70" />
+          <div className="absolute inset-0 bg-school-blue-dark/70" />
         </div>
         <div className="container mx-auto px-6 relative z-10 py-24">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-0.5 bg-school-amber" />
-              <span className="text-school-amber text-sm font-medium tracking-widest uppercase">
+              <div className="w-8 h-0.5 bg-school-red" />
+              <span className="text-school-red-light text-sm font-medium tracking-widest uppercase">
                 Kankarbagh, Patna
               </span>
             </div>
@@ -105,7 +144,7 @@ export default function Home() {
               <Link to="/student-life">
                 <Button
                   size="lg"
-                  className="bg-school-amber text-school-indigo-dark hover:bg-school-amber-light font-bold px-8 rounded-sm"
+                  className="bg-school-red text-white hover:bg-school-red-light font-bold px-8 rounded-sm"
                 >
                   Explore Campus Life
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -115,7 +154,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-school-indigo-dark font-bold px-8 rounded-sm"
+                  className="border-white text-white hover:bg-white hover:text-school-blue-dark font-bold px-8 rounded-sm"
                 >
                   Apply Today
                 </Button>
@@ -126,15 +165,15 @@ export default function Home() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-school-amber py-10">
+      <section className="bg-school-red py-10">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="font-serif text-3xl md:text-4xl font-bold text-school-indigo-dark mb-1">
+                <div className="font-serif text-3xl md:text-4xl font-bold text-white mb-1">
                   {stat.value}
                 </div>
-                <div className="text-school-indigo-dark/80 text-sm font-medium">{stat.label}</div>
+                <div className="text-white/80 text-sm font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -147,11 +186,11 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-6 h-0.5 bg-school-amber" />
-                <span className="text-school-amber text-sm font-medium tracking-widest uppercase">About Us</span>
+                <div className="w-6 h-0.5 bg-school-red" />
+                <span className="text-school-red text-sm font-medium tracking-widest uppercase">About Us</span>
               </div>
               <h2 className="section-heading mb-4">More Than Just Textbooks</h2>
-              <div className="amber-divider" />
+              <div className="red-divider" />
               <p className="text-muted-foreground leading-relaxed mt-5 mb-6 text-base">
                 At Doon's Public School, we believe high school is more than just textbooks. We are a community
                 dedicated to helping you discover what you're good at, supporting you through challenges, and
@@ -160,31 +199,31 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {features.map((f) => (
                   <div key={f.title} className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-full bg-school-indigo/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <f.icon className="w-4 h-4 text-school-indigo" />
+                    <div className="w-9 h-9 rounded-full bg-school-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <f.icon className="w-4 h-4 text-school-blue" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-school-indigo text-sm mb-0.5">{f.title}</h4>
+                      <h4 className="font-semibold text-school-blue text-sm mb-0.5">{f.title}</h4>
                       <p className="text-muted-foreground text-xs leading-relaxed">{f.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
               <Link to="/about">
-                <Button className="bg-school-indigo text-white hover:bg-school-indigo/90 rounded-sm font-semibold">
+                <Button className="bg-school-blue text-white hover:bg-school-blue/90 rounded-sm font-semibold">
                   Learn More About Us
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
             </div>
             <div className="relative">
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-school-amber/20 rounded-sm -z-10" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-school-red/20 rounded-sm -z-10" />
               <img
                 src="/assets/generated/about-image.dim_800x500.png"
                 alt="Doon's Public School"
                 className="w-full rounded-sm shadow-card-hover object-cover"
               />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-school-indigo/10 rounded-sm -z-10" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-school-blue/10 rounded-sm -z-10" />
             </div>
           </div>
         </div>
@@ -195,7 +234,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="section-heading">News & Announcements</h2>
-            <div className="amber-divider mx-auto" />
+            <div className="red-divider mx-auto" />
             <p className="text-muted-foreground max-w-xl mx-auto mt-4">
               Stay up to date with the latest happenings at Doon's Public School.
             </p>
@@ -209,7 +248,7 @@ export default function Home() {
                   <a.icon className={`w-4 h-4 ${a.color}`} />
                   <span className={`text-xs font-bold uppercase tracking-wider ${a.color}`}>{a.type}</span>
                 </div>
-                <p className="text-school-indigo-dark font-medium text-sm leading-relaxed">{a.text}</p>
+                <p className="text-school-blue-dark font-medium text-sm leading-relaxed">{a.text}</p>
               </div>
             ))}
           </div>
@@ -230,7 +269,7 @@ export default function Home() {
               </div>
               <div className="text-center mt-8">
                 <Link to="/news">
-                  <Button variant="outline" className="border-school-indigo text-school-indigo hover:bg-school-indigo hover:text-white rounded-sm font-semibold">
+                  <Button variant="outline" className="border-school-blue text-school-blue hover:bg-school-blue hover:text-white rounded-sm font-semibold">
                     View All News
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -242,25 +281,25 @@ export default function Home() {
       </section>
 
       {/* Student Testimonials */}
-      <section className="py-20 bg-school-indigo">
+      <section className="py-20 bg-school-blue">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-3">
               What Our Students Say
             </h2>
-            <div className="w-16 h-1 bg-school-amber rounded-full mx-auto" />
+            <div className="w-16 h-1 bg-school-red rounded-full mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {testimonials.map((t) => (
               <Card key={t.name} className="bg-white/10 border border-white/20 rounded-sm shadow-none">
                 <CardContent className="p-8">
-                  <div className="text-school-amber text-4xl font-serif leading-none mb-4">"</div>
+                  <div className="text-school-red-light text-4xl font-serif leading-none mb-4">"</div>
                   <p className="text-white/90 leading-relaxed mb-6 italic">
                     {t.quote}
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-school-amber/30 flex items-center justify-center">
-                      <span className="text-school-amber font-bold text-sm">{t.name.charAt(0)}</span>
+                    <div className="w-10 h-10 rounded-full bg-school-red/30 flex items-center justify-center">
+                      <span className="text-school-red-light font-bold text-sm">{t.name.charAt(0)}</span>
                     </div>
                     <div>
                       <p className="font-semibold text-white text-sm">{t.name}</p>
@@ -274,20 +313,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Campus Gallery */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <div className="w-6 h-0.5 bg-school-red" />
+              <span className="text-school-red text-sm font-medium tracking-widest uppercase">Photo Gallery</span>
+              <div className="w-6 h-0.5 bg-school-red" />
+            </div>
+            <h2 className="section-heading">Our Campus</h2>
+            <div className="red-divider mx-auto" />
+            <p className="text-muted-foreground max-w-xl mx-auto mt-4">
+              Take a glimpse into life at Doon's Public School — our facilities, activities, and vibrant community.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className={`group relative overflow-hidden rounded-sm ${
+                  index === 0 ? 'md:col-span-2 lg:col-span-1' : ''
+                }`}
+              >
+                {image.isPlaceholder ? (
+                  <div className="w-full h-56 border-2 border-dashed border-school-blue/20 bg-school-cream rounded-sm flex flex-col items-center justify-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-school-blue/10 flex items-center justify-center">
+                      <ImageIcon className="w-6 h-6 text-school-blue/40" />
+                    </div>
+                    <span className="text-school-blue/40 text-sm font-medium">{image.caption}</span>
+                    <span className="text-school-blue/30 text-xs">Photo coming soon</span>
+                  </div>
+                ) : (
+                  <div className="relative overflow-hidden rounded-sm shadow-card-hover">
+                    <img
+                      src={image.src!}
+                      alt={image.alt}
+                      className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-school-blue-dark/0 group-hover:bg-school-blue-dark/40 transition-all duration-300" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                      <span className="text-white font-semibold text-sm bg-school-blue/80 px-3 py-1 rounded-sm">
+                        {image.caption}
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Banner */}
-      <section className="py-16 bg-school-amber">
+      <section className="py-16 bg-school-red">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-school-indigo-dark mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Join the Doon's Family?
           </h2>
-          <p className="text-school-indigo-dark/80 max-w-xl mx-auto mb-8 text-base">
+          <p className="text-white/80 max-w-xl mx-auto mb-8 text-base">
             Take the first step towards an exceptional education. Apply today and become part of our vibrant community.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/admissions">
               <Button
                 size="lg"
-                className="bg-school-indigo text-white hover:bg-school-indigo/90 font-bold px-10 rounded-sm"
+                className="bg-white text-school-red hover:bg-school-blue-50 font-bold px-10 rounded-sm"
               >
                 Apply Today
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -297,7 +389,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-school-indigo-dark text-school-indigo-dark hover:bg-school-indigo-dark hover:text-white font-bold px-10 rounded-sm"
+                className="border-white text-white hover:bg-white hover:text-school-red font-bold px-10 rounded-sm"
               >
                 Contact Us
               </Button>

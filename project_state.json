@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
-  "summary": "Professional school website for Doon's Public School (Patna) with detailed content for Homepage, About Us, Admissions, Academics, Student Life, and Contact pages, plus Internet Identity login and admin portal",
+  "projectStateVersion": 13,
+  "summary": "Professional school website for Doon's Public School (Patna) with detailed content for Homepage, About Us, Admissions, Academics, Student Life, and Contact pages, plus Internet Identity login and admin portal; school logo added to navbar and site theme updated to water blue + red palette",
   "architectural_notes": [
     "Multi-page school website with professional design and responsive layout",
     "Internet Identity integration for secure authentication of staff and students",
@@ -10,6 +10,7 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Crop to landscape, remove phone UI chrome (status bar and browser bar) from top and bottom, enhance brightness slightly (IMG_6461.png > campus-corridor.dim_800x600.jpg)",
   "existing_features": [
     {
       "id": "feature-create-a-homepage-with-a-prominent-hero-section-featuring-the-school-name-tagline-and-a-call-to-action-button-include-a-sticky-top-navigation-bar-with-links-to-all-major-sections-home-about-academics-news-contact-and-a-footer-with-the-school-s-contact-info-and-social-media-placeholders",
@@ -146,6 +147,54 @@
         "REQ-17"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-pages-home-tsx-replace-the-current-hero-section-image-background-the-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-section-1-div-2-with-the-uploaded-doon-s-public-school-entrance-photo-saved-as-frontend-public-assets-generated-school-entrance-hero-dim-1200x600-jpg-display-it-as-an-img-element-or-css-background-image-filling-the-hero-section-with-appropriate-overlay-to-keep-headline-text-readable",
+      "title": "In frontend/src/pages/Home.tsx, replace the current hero section image/background (the element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/section[1]/div[2]) with the uploaded Doon's Public School entrance photo, saved as frontend/public/assets/generated/school-entrance-hero.dim_1200x600.jpg. Display it as an <img> element (or CSS background-image) filling the hero section, with appropriate overlay to keep headline text readable.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-gallery-section-to-frontend-src-pages-home-tsx-positioned-after-the-existing-content-sections-e-g-after-testimonials-the-section-should-have-a-heading-our-campus-and-display-the-school-entrance-photo-school-entrance-hero-dim-1200x600-jpg-in-a-responsive-grid-layout-include-placeholder-slots-visually-styled-empty-cards-to-indicate-more-photos-can-be-added-later",
+      "title": "Add a Gallery section to frontend/src/pages/Home.tsx, positioned after the existing content sections (e.g., after testimonials). The section should have a heading 'Our Campus' and display the school entrance photo (school-entrance-hero.dim_1200x600.jpg) in a responsive grid layout. Include placeholder slots (visually styled empty cards) to indicate more photos can be added later.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-components-layout-tsx-update-the-footer-phone-number-to-8541886552-replacing-the-current-insert-phone-number-placeholder-the-display-should-read-8541886552",
+      "title": "In frontend/src/components/Layout.tsx, update the footer phone number to 8541886552 (replacing the current '[Insert Phone Number]' placeholder). The display should read '📞 8541886552'.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-logo-image-in-the-navbar-at-xpath-html-1-body-1-div-1-div-1-header-1-nav-1-a-1-div-1-img-1-with-the-uploaded-school-logo-saved-as-frontend-public-assets-generated-school-logo-dim-120x120-png-display-it-as-an-img-element-with-appropriate-height-e-g-h-10-or-h-12-and-object-fit-contain-so-it-renders-cleanly-in-the-sticky-navigation-bar",
+      "title": "Replace the existing logo image in the navbar (at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/nav[1]/a[1]/div[1]/img[1]) with the uploaded school logo saved as frontend/public/assets/generated/school-logo.dim_120x120.png. Display it as an <img> element with appropriate height (e.g., h-10 or h-12) and object-fit: contain so it renders cleanly in the sticky navigation bar.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-wide-color-theme-in-frontend-src-index-css-and-frontend-tailwind-config-js-to-use-a-water-blue-and-red-palette-use-water-sky-blue-e-g-4aaed9-or-similar-as-the-primary-color-and-red-e-g-c0392b-or-similar-matching-the-logo-s-red-as-the-accent-color-apply-the-new-palette-to-navigation-bar-background-and-links-hero-section-gradient-overlay-primary-buttons-card-borders-highlights-section-header-accents-badges-and-the-footer-ensure-sufficient-contrast-and-readability-throughout-replace-the-current-indigo-amber-cream-palette-with-this-new-water-blue-red-scheme",
+      "title": "Update the site-wide color theme in frontend/src/index.css and frontend/tailwind.config.js to use a water blue and red palette. Use water/sky blue (e.g., #4AAED9 or similar) as the primary color and red (e.g., #C0392B or similar, matching the logo's red) as the accent color. Apply the new palette to: navigation bar background and links, hero section gradient/overlay, primary buttons, card borders/highlights, section header accents, badges, and the footer. Ensure sufficient contrast and readability throughout. Replace the current indigo/amber/cream palette with this new water blue + red scheme.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-pages-home-tsx-replace-the-image-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-section-3-div-1-div-1-div-2-img-1-the-second-image-slot-in-the-our-campus-gallery-section-with-an-img-element-sourcing-the-new-asset-at-assets-generated-campus-corridor-dim-800x600-jpg-use-object-fit-cover-so-it-fills-the-gallery-card-consistently-with-other-gallery-images",
+      "title": "In frontend/src/pages/Home.tsx, replace the image element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/section[3]/div[1]/div[1]/div[2]/img[1] (the second image slot in the 'Our Campus' gallery section) with an <img> element sourcing the new asset at /assets/generated/campus-corridor.dim_800x600.jpg. Use object-fit: cover so it fills the gallery card consistently with other gallery images.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -230,6 +279,42 @@
     {
       "id": "AR-14",
       "summary": "Update Contact page with Doon's address, office hours, and updated contact form fields (Name, Current Class, Email, Question)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Replace hero section image with uploaded Doon's Public School entrance photo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Add Gallery section on the Homepage featuring the school entrance photo",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Update footer phone number to 8541886552",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Add school logo (globe with children, laurel branches, Work is Worship motto) to the navbar",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Update site-wide theme to water blue (primary) and red (accent) color palette across navbar, hero, buttons, cards, section headers, and footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Replace the second image slot in the 'Our Campus' gallery section with the uploaded corridor photo (IMG_6461.png), saved as a new asset (campus-corridor.jpg)",
       "reqIds": [],
       "status": "pending"
     }

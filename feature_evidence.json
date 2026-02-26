@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-homepage-frontend-src-pages-home-tsx-with-the-following-doon-s-public-school-content-hero-headline-welcome-to-doon-s-public-school-sub-headline-discover-your-passion-build-your-skills-and-shape-your-future-right-here-in-the-heart-of-patna-two-cta-buttons-labelled-explore-campus-life-and-apply-today-add-an-about-us-snapshot-section-with-the-text-at-doon-s-public-school-we-believe-high-school-is-more-than-just-textbooks-we-are-a-community-dedicated-to-helping-you-discover-what-you-re-good-at-supporting-you-through-challenges-and-preparing-you-for-whatever-comes-next-add-a-news-announcements-preview-section-showing-three-placeholder-items-upcoming-event-annual-sports-meet-registration-is-open-notice-term-1-examination-schedules-released-highlight-congratulations-to-the-debate-team-for-winning-the-city-championship-add-a-student-testimonials-section-with-two-quotes-doon-s-gave-me-the-confidence-to-lead-the-teachers-here-don-t-just-teach-they-actually-listen-rahul-k-class-12-and-from-the-science-labs-to-the-football-field-there-s-always-something-exciting-happening-here-i-ve-found-my-best-friends-at-this-school-sneha-p-class-10",
-      "featureTitle": "Update the Homepage (frontend/src/pages/Home.tsx) with the following Doon's Public School content: Hero headline 'Welcome to Doon's Public School!', sub-headline 'Discover your passion, build your skills, and shape your future right here in the heart of Patna.', two CTA buttons labelled 'Explore Campus Life' and 'Apply Today'. Add an About Us snapshot section with the text: 'At Doon's Public School, we believe high school is more than just textbooks. We are a community dedicated to helping you discover what you're good at, supporting you through challenges, and preparing you for whatever comes next.' Add a News & Announcements preview section showing three placeholder items: 'Upcoming Event: Annual Sports Meet Registration is Open!', 'Notice: Term 1 Examination Schedules Released.', 'Highlight: Congratulations to the Debate Team for winning the City Championship!' Add a Student Testimonials section with two quotes: '\"Doon's gave me the confidence to lead. The teachers here don't just teach; they actually listen.\" – Rahul K., Class 12' and '\"From the science labs to the football field, there's always something exciting happening here. I've found my best friends at this school.\" – Sneha P., Class 10'.",
+      "featureId": "feature-in-frontend-src-pages-home-tsx-replace-the-image-element-at-xpath-html-1-body-1-div-1-div-1-main-1-div-1-section-3-div-1-div-1-div-2-img-1-the-second-image-slot-in-the-our-campus-gallery-section-with-an-img-element-sourcing-the-new-asset-at-assets-generated-campus-corridor-dim-800x600-jpg-use-object-fit-cover-so-it-fills-the-gallery-card-consistently-with-other-gallery-images",
+      "featureTitle": "In frontend/src/pages/Home.tsx, replace the image element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/section[3]/div[1]/div[1]/div[2]/img[1] (the second image slot in the 'Our Campus' gallery section) with an <img> element sourcing the new asset at /assets/generated/campus-corridor.dim_800x600.jpg. Use object-fit: cover so it fills the gallery card consistently with other gallery images.",
       "files": [
         "frontend/src/pages/Home.tsx"
       ],
@@ -16,126 +16,7 @@
         "authorization@4.0.0"
       ],
       "testIds": [
-        "REQ-11"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-footer-in-frontend-src-components-layout-tsx-with-doon-s-public-school-contact-details-address-chitragupt-nagar-kankarbagh-patna-20-phone-insert-phone-number-email-insert-email-address-and-social-media-icon-placeholders-facebook-instagram-twitter-x-youtube",
-      "featureTitle": "Update the footer in frontend/src/components/Layout.tsx with Doon's Public School contact details: address '📍 Chitragupt Nagar, Kankarbagh, Patna - 20', phone '📞 [Insert Phone Number]', email '✉️ [Insert Email Address]', and social media icon placeholders (Facebook, Instagram, Twitter/X, YouTube).",
-      "files": [
-        "frontend/src/components/Layout.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "authorization@4.0.0"
-      ],
-      "testIds": [
-        "REQ-12"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-about-us-page-frontend-src-pages-about-tsx-with-the-following-content-our-story-section-with-the-text-about-kankarbagh-and-the-school-s-founding-goal-our-mission-section-to-empower-every-student-with-the-knowledge-character-and-confidence-to-succeed-in-a-changing-world-our-core-values-section-listing-curiosity-respect-integrity-and-excellence-a-message-from-the-principal-section-with-the-full-principal-s-message-welcome-students-high-school-is-one-of-the-most-exciting-chapters-of-your-life-full-text-as-provided",
-      "featureTitle": "Update the About Us page (frontend/src/pages/About.tsx) with the following content: 'Our Story' section with the text about Kankarbagh and the school's founding goal. 'Our Mission' section: 'To empower every student with the knowledge, character, and confidence to succeed in a changing world.' 'Our Core Values' section listing: Curiosity, Respect, Integrity, and Excellence. A 'Message from the Principal' section with the full principal's message: 'Welcome, students! High school is one of the most exciting chapters of your life...' (full text as provided).",
-      "files": [
-        "frontend/src/pages/About.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "authorization@4.0.0"
-      ],
-      "testIds": [
-        "REQ-13"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-a-new-admissions-page-at-frontend-src-pages-admissions-tsx-with-headline-ready-to-join-the-doon-s-family-body-copy-about-the-admission-process-a-4-step-your-application-journey-section-1-say-hello-2-take-a-tour-3-submit-your-application-4-meet-greet-and-a-prominent-cta-button-labelled-download-admission-form-add-an-admissions-route-to-frontend-src-app-tsx-and-a-admissions-link-to-the-navigation-bar-in-frontend-src-components-layout-tsx",
-      "featureTitle": "Create a new Admissions page at frontend/src/pages/Admissions.tsx with: Headline 'Ready to Join the Doon's Family?', body copy about the admission process, a 4-step 'Your Application Journey' section (1. Say Hello, 2. Take a Tour, 3. Submit Your Application, 4. Meet & Greet), and a prominent CTA button labelled 'Download Admission Form'. Add an /admissions route to frontend/src/App.tsx and a 'Admissions' link to the navigation bar in frontend/src/components/Layout.tsx.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Layout.tsx",
-        "frontend/src/pages/Admissions.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "authorization@4.0.0"
-      ],
-      "testIds": [
-        "REQ-14"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-academics-page-frontend-src-pages-academics-tsx-with-the-headline-learn-challenge-grow-and-new-body-copy-about-interactive-learning-update-the-three-focus-area-cards-to-1-science-tech-fully-equipped-physics-chemistry-biology-and-computer-labs-2-humanities-commerce-building-critical-thinkers-and-future-entrepreneurs-3-exam-prep-special-guidance-and-doubt-clearing-sessions-to-help-ace-board-exams-with-confidence",
-      "featureTitle": "Update the Academics page (frontend/src/pages/Academics.tsx) with the headline 'Learn, Challenge, Grow.' and new body copy about interactive learning. Update the three focus area cards to: (1) 'Science & Tech' – Fully equipped physics, chemistry, biology, and computer labs. (2) 'Humanities & Commerce' – Building critical thinkers and future entrepreneurs. (3) 'Exam Prep' – Special guidance and doubt-clearing sessions to help ace board exams with confidence.",
-      "files": [
-        "frontend/src/pages/Academics.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "authorization@4.0.0"
-      ],
-      "testIds": [
-        "REQ-15"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-a-new-student-life-extracurriculars-page-at-frontend-src-pages-studentlife-tsx-with-headline-beyond-the-classroom-body-copy-about-school-life-and-four-activity-cards-sports-cricket-football-basketball-at-district-state-levels-arts-culture-annual-fest-drama-club-artistic-skills-tech-coding-club-apps-websites-robotics-debate-model-un-public-speaking-argumentation-add-a-student-life-route-to-frontend-src-app-tsx-and-a-student-life-link-to-the-navigation-bar-in-frontend-src-components-layout-tsx",
-      "featureTitle": "Create a new Student Life & Extracurriculars page at frontend/src/pages/StudentLife.tsx with: Headline 'Beyond the Classroom.', body copy about school life, and four activity cards: ⚽ Sports (cricket, football, basketball at district/state levels), 🎨 Arts & Culture (annual fest, drama club, artistic skills), 💻 Tech & Coding Club (apps, websites, robotics), 🗣️ Debate & Model UN (public speaking, argumentation). Add a /student-life route to frontend/src/App.tsx and a 'Student Life' link to the navigation bar in frontend/src/components/Layout.tsx.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Layout.tsx",
-        "frontend/src/pages/StudentLife.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "authorization@4.0.0"
-      ],
-      "testIds": [
-        "REQ-16"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-the-contact-page-frontend-src-pages-contact-tsx-with-headline-we-re-here-to-help-body-copy-have-a-question-about-admissions-subject-choices-or-school-events-drop-us-a-message-or-visit-us-on-campus-address-doon-s-public-school-chitragupt-nagar-kankarbagh-patna-20-office-hours-monday-to-saturday-8-00-am-3-00-pm-update-the-contact-form-fields-to-name-current-class-email-your-question-with-a-send-message-submit-button",
-      "featureTitle": "Update the Contact page (frontend/src/pages/Contact.tsx) with: Headline 'We're Here to Help.', body copy 'Have a question about admissions, subject choices, or school events? Drop us a message or visit us on campus!', address 'Doon's Public School, Chitragupt Nagar, Kankarbagh, Patna - 20', office hours 'Monday to Saturday, 8:00 AM – 3:00 PM'. Update the contact form fields to: Name, Current Class, Email, Your Question, with a 'Send Message' submit button.",
-      "files": [
-        "frontend/src/components/ContactForm.tsx",
-        "frontend/src/pages/Contact.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0",
-        "authorization@4.0.0"
-      ],
-      "testIds": [
-        "REQ-17"
+        "REQ-23"
       ],
       "confidence": "high"
     }

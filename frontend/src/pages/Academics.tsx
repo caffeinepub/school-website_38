@@ -1,4 +1,4 @@
-import { FlaskConical, Palette, Monitor, BookOpen, ChevronRight } from 'lucide-react';
+import { FlaskConical, Palette, BookOpen, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import DepartmentCard from '@/components/DepartmentCard';
 
@@ -17,18 +17,18 @@ const departments = [
     title: 'Humanities & Commerce',
     description: 'Building critical thinkers and future entrepreneurs through comprehensive arts and commerce programs.',
     courses: ['History', 'Economics', 'Business Studies', 'Accountancy', 'Political Science', 'Sociology'],
-    color: 'bg-amber-50 border-amber-200',
-    iconColor: 'text-amber-700',
-    iconBg: 'bg-amber-100',
+    color: 'bg-school-red/5 border-school-red/20',
+    iconColor: 'text-school-red',
+    iconBg: 'bg-school-red/10',
   },
   {
     icon: BookOpen,
     title: 'Exam Prep',
     description: 'Special guidance and doubt-clearing sessions to help students ace board exams with confidence.',
     courses: ['Board Exam Strategy', 'Doubt-Clearing Sessions', 'Mock Tests', 'Revision Classes', 'Study Skills', 'Time Management'],
-    color: 'bg-blue-50 border-blue-200',
-    iconColor: 'text-blue-700',
-    iconBg: 'bg-blue-100',
+    color: 'bg-school-blue/5 border-school-blue/20',
+    iconColor: 'text-school-blue',
+    iconBg: 'bg-school-blue/10',
   },
 ];
 
@@ -43,14 +43,14 @@ export default function Academics() {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-school-indigo py-20 relative overflow-hidden">
+      <section className="bg-school-blue py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-school-amber translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-school-red translate-x-1/2 -translate-y-1/2" />
         </div>
         <div className="container mx-auto px-6 relative">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-6 h-0.5 bg-school-amber" />
-            <span className="text-school-amber text-sm font-medium tracking-widest uppercase">Academics</span>
+            <div className="w-6 h-0.5 bg-school-red" />
+            <span className="text-school-red-light text-sm font-medium tracking-widest uppercase">Academics</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
             Learn, Challenge, Grow.
@@ -63,15 +63,15 @@ export default function Academics() {
       </section>
 
       {/* Highlights */}
-      <section className="bg-school-amber py-10">
+      <section className="bg-school-red py-10">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {highlights.map((h) => (
               <div key={h.label}>
-                <div className="font-serif text-3xl md:text-4xl font-bold text-school-indigo-dark mb-1">
+                <div className="font-serif text-3xl md:text-4xl font-bold text-white mb-1">
                   {h.value}
                 </div>
-                <div className="text-school-indigo-dark/80 text-sm font-medium">{h.label}</div>
+                <div className="text-white/80 text-sm font-medium">{h.label}</div>
               </div>
             ))}
           </div>
@@ -83,7 +83,7 @@ export default function Academics() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-heading mb-4">Interactive, Real-World Learning</h2>
-            <div className="amber-divider mx-auto" />
+            <div className="red-divider mx-auto" />
             <p className="text-muted-foreground leading-relaxed mt-6 mb-4 text-base">
               You won't just be memorizing facts; you'll be running experiments in the lab, engaging in classroom
               debates, and working on projects that solve real-world problems.
@@ -101,7 +101,7 @@ export default function Academics() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="section-heading">Our Focus Areas</h2>
-            <div className="amber-divider mx-auto" />
+            <div className="red-divider mx-auto" />
             <p className="text-muted-foreground max-w-2xl mx-auto mt-4">
               Each focus area is led by expert educators committed to delivering an engaging,
               rigorous, and relevant learning experience.
@@ -116,13 +116,13 @@ export default function Academics() {
       </section>
 
       {/* Academic Philosophy */}
-      <section className="py-20 bg-school-indigo">
+      <section className="py-20 bg-school-blue">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-3">
               Our Academic Approach
             </h2>
-            <div className="w-16 h-1 bg-school-amber rounded-full mx-auto" />
+            <div className="w-16 h-1 bg-school-red rounded-full mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
@@ -131,7 +131,7 @@ export default function Academics() {
               { title: 'Board Exam Guidance', desc: 'Dedicated doubt-clearing sessions and mock tests to ensure every student is exam-ready.' },
             ].map((prog) => (
               <div key={prog.title} className="bg-white/10 border border-white/20 rounded-sm p-6 card-hover">
-                <ChevronRight className="w-5 h-5 text-school-amber mb-3" />
+                <ChevronRight className="w-5 h-5 text-school-red-light mb-3" />
                 <h3 className="font-serif text-lg font-semibold text-white mb-2">{prog.title}</h3>
                 <p className="text-white/75 text-sm leading-relaxed">{prog.desc}</p>
               </div>

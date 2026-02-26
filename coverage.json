@@ -1,100 +1,24 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T15:13:51.646Z",
+  "generatedAt": "2026-02-26T21:38:20.887Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 7,
-    "implemented": 7,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-11",
-        "summary": "Update the Homepage (frontend/src/pages/Home.tsx) with the following Doon's Public School content: Hero headline 'Welcome to Doon's Public School!', sub-headline 'Discover your passion, build your skills, and shape your future right here in the heart of Patna.', two CTA buttons labelled 'Explore Campus Life' and 'Apply Today'. Add an About Us snapshot section with the text: 'At Doon's Public School, we believe high school is more than just textbooks. We are a community dedicated to helping you discover what you're good at, supporting you through challenges, and preparing you for whatever comes next.' Add a News & Announcements preview section showing three placeholder items: 'Upcoming Event: Annual Sports Meet Registration is Open!', 'Notice: Term 1 Examination Schedules Released.', 'Highlight: Congratulations to the Debate Team for winning the City Championship!' Add a Student Testimonials section with two quotes: '\"Doon's gave me the confidence to lead. The teachers here don't just teach; they actually listen.\" – Rahul K., Class 12' and '\"From the science labs to the football field, there's always something exciting happening here. I've found my best friends at this school.\" – Sneha P., Class 10'.",
+        "id": "REQ-23",
+        "summary": "In frontend/src/pages/Home.tsx, replace the image element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/section[3]/div[1]/div[1]/div[2]/img[1] (the second image slot in the 'Our Campus' gallery section) with an <img> element sourcing the new asset at /assets/generated/campus-corridor.dim_800x600.jpg. Use object-fit: cover so it fills the gallery card consistently with other gallery images.",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/pages/Home.tsx"
         ],
         "matchedFiles": [
           "frontend/src/pages/Home.tsx"
-        ]
-      },
-      {
-        "id": "REQ-12",
-        "summary": "Update the footer in frontend/src/components/Layout.tsx with Doon's Public School contact details: address '📍 Chitragupt Nagar, Kankarbagh, Patna - 20', phone '📞 [Insert Phone Number]', email '✉️ [Insert Email Address]', and social media icon placeholders (Facebook, Instagram, Twitter/X, YouTube).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Layout.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Layout.tsx"
-        ]
-      },
-      {
-        "id": "REQ-13",
-        "summary": "Update the About Us page (frontend/src/pages/About.tsx) with the following content: 'Our Story' section with the text about Kankarbagh and the school's founding goal. 'Our Mission' section: 'To empower every student with the knowledge, character, and confidence to succeed in a changing world.' 'Our Core Values' section listing: Curiosity, Respect, Integrity, and Excellence. A 'Message from the Principal' section with the full principal's message: 'Welcome, students! High school is one of the most exciting chapters of your life...' (full text as provided).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/About.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/About.tsx"
-        ]
-      },
-      {
-        "id": "REQ-14",
-        "summary": "Create a new Admissions page at frontend/src/pages/Admissions.tsx with: Headline 'Ready to Join the Doon's Family?', body copy about the admission process, a 4-step 'Your Application Journey' section (1. Say Hello, 2. Take a Tour, 3. Submit Your Application, 4. Meet & Greet), and a prominent CTA button labelled 'Download Admission Form'. Add an /admissions route to frontend/src/App.tsx and a 'Admissions' link to the navigation bar in frontend/src/components/Layout.tsx.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/Admissions.tsx",
-          "frontend/src/App.tsx",
-          "frontend/src/components/Layout.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/Admissions.tsx",
-          "frontend/src/App.tsx",
-          "frontend/src/components/Layout.tsx"
-        ]
-      },
-      {
-        "id": "REQ-15",
-        "summary": "Update the Academics page (frontend/src/pages/Academics.tsx) with the headline 'Learn, Challenge, Grow.' and new body copy about interactive learning. Update the three focus area cards to: (1) 'Science & Tech' – Fully equipped physics, chemistry, biology, and computer labs. (2) 'Humanities & Commerce' – Building critical thinkers and future entrepreneurs. (3) 'Exam Prep' – Special guidance and doubt-clearing sessions to help ace board exams with confidence.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/Academics.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/Academics.tsx"
-        ]
-      },
-      {
-        "id": "REQ-16",
-        "summary": "Create a new Student Life & Extracurriculars page at frontend/src/pages/StudentLife.tsx with: Headline 'Beyond the Classroom.', body copy about school life, and four activity cards: ⚽ Sports (cricket, football, basketball at district/state levels), 🎨 Arts & Culture (annual fest, drama club, artistic skills), 💻 Tech & Coding Club (apps, websites, robotics), 🗣️ Debate & Model UN (public speaking, argumentation). Add a /student-life route to frontend/src/App.tsx and a 'Student Life' link to the navigation bar in frontend/src/components/Layout.tsx.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/StudentLife.tsx",
-          "frontend/src/App.tsx",
-          "frontend/src/components/Layout.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/StudentLife.tsx",
-          "frontend/src/App.tsx",
-          "frontend/src/components/Layout.tsx"
-        ]
-      },
-      {
-        "id": "REQ-17",
-        "summary": "Update the Contact page (frontend/src/pages/Contact.tsx) with: Headline 'We're Here to Help.', body copy 'Have a question about admissions, subject choices, or school events? Drop us a message or visit us on campus!', address 'Doon's Public School, Chitragupt Nagar, Kankarbagh, Patna - 20', office hours 'Monday to Saturday, 8:00 AM – 3:00 PM'. Update the contact form fields to: Name, Current Class, Email, Your Question, with a 'Send Message' submit button.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/Contact.tsx",
-          "frontend/src/components/ContactForm.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/Contact.tsx",
-          "frontend/src/components/ContactForm.tsx"
         ]
       }
     ]
@@ -104,15 +28,8 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/App.tsx",
-    "frontend/src/components/ContactForm.tsx",
-    "frontend/src/components/Layout.tsx",
-    "frontend/src/pages/About.tsx",
-    "frontend/src/pages/Academics.tsx",
-    "frontend/src/pages/Admissions.tsx",
-    "frontend/src/pages/Contact.tsx",
+    "frontend/public/assets/generated/campus-corridor.dim_800x600.jpg",
     "frontend/src/pages/Home.tsx",
-    "frontend/src/pages/StudentLife.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

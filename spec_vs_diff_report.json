@@ -1,58 +1,14 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-26T15:13:51.641Z",
-  "summary": "All seven requirements (REQ-11 through REQ-17) appear to be implemented in the diff. The new pages (Admissions, StudentLife) are created, existing pages (Home, About, Academics, Contact) are updated, routes are added to App.tsx, navigation links are added to Layout.tsx, and the footer is updated with Doon's Public School contact details. Content matches the specified requirements closely based on the available diff evidence.",
+  "generatedAt": "2026-02-26T21:38:20.883Z",
+  "summary": "REQ-23 is fully implemented. The second gallery slot in Home.tsx now sources /assets/generated/campus-corridor.dim_800x600.jpg with isPlaceholder: false, and the gallery rendering logic uses object-fit: cover consistent with other images. No hallucinated features were detected.",
   "missing_requirements": [],
-  "hallucinated_features": [
-    {
-      "description": "A top bar above the navigation displaying phone number, email, and social media icons (Facebook, X, Instagram, YouTube) was added to the header area of Layout.tsx, in addition to the footer update.",
-      "reason": "REQ-12 only requested the footer to be updated with contact details and social media placeholders. The diff shows a top bar was also added with the same information, which was not requested.",
-      "evidence": [
-        "frontend/src/components/Layout.tsx"
-      ]
-    },
-    {
-      "description": "A 'Documents Required' checklist section was added to the Admissions page listing five required documents.",
-      "reason": "REQ-14 does not mention a documents required checklist section; it only specifies the headline, body copy, 4-step journey, and 'Download Admission Form' CTA.",
-      "evidence": [
-        "frontend/src/pages/Admissions.tsx"
-      ]
-    },
-    {
-      "description": "Activity tag pills (e.g., 'Cricket', 'Football', 'Annual Fest', 'App Development') were added to each Student Life activity card.",
-      "reason": "REQ-16 does not specify tag/pill components on the activity cards, only the emoji icon, title, and description.",
-      "evidence": [
-        "frontend/src/pages/StudentLife.tsx"
-      ]
-    },
-    {
-      "description": "A stats/highlights bar with metrics (Focus Areas: 3, Subjects Offered: 20+, Lab Facilities: 5, Board Exam Pass Rate: 98%) was added to the Academics page.",
-      "reason": "REQ-15 only specifies updating the headline and three focus area cards; no stats bar was requested.",
-      "evidence": [
-        "frontend/src/pages/Academics.tsx"
-      ]
-    },
-    {
-      "description": "A stats bar with school statistics (1,000+ Students Enrolled, 60+ Expert Faculty, 98% Board Exam Pass Rate, 25+ Years of Excellence) was added to the Homepage.",
-      "reason": "REQ-11 does not mention a stats bar; it only specifies the hero, About Us snapshot, News & Announcements, and testimonials sections.",
-      "evidence": [
-        "frontend/src/pages/Home.tsx"
-      ]
-    }
-  ],
-  "confidence": 0.82,
+  "hallucinated_features": [],
+  "confidence": 0.95,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/App.tsx",
-    "frontend/src/components/ContactForm.tsx",
-    "frontend/src/components/Layout.tsx",
-    "frontend/src/pages/About.tsx",
-    "frontend/src/pages/Academics.tsx",
-    "frontend/src/pages/Admissions.tsx",
-    "frontend/src/pages/Contact.tsx",
     "frontend/src/pages/Home.tsx",
-    "frontend/src/pages/StudentLife.tsx",
     "project_state.json"
   ]
 }

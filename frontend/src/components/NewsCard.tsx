@@ -34,20 +34,20 @@ export default function NewsCard({ item, imageIndex = 0 }: NewsCardProps) {
           alt={item.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-school-indigo-dark/20 group-hover:bg-school-indigo-dark/10 transition-colors duration-300" />
+        <div className="absolute inset-0 bg-school-blue-dark/20 group-hover:bg-school-blue-dark/10 transition-colors duration-300" />
       </div>
       <CardContent className="p-5 flex flex-col flex-1">
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-3">
-          <Calendar className="w-3.5 h-3.5 text-school-amber" />
+          <Calendar className="w-3.5 h-3.5 text-school-red" />
           <span>{formatDate(item.date)}</span>
         </div>
-        <h3 className="font-serif text-lg font-semibold text-school-indigo leading-snug mb-2 group-hover:text-school-indigo-light transition-colors">
+        <h3 className="font-serif text-lg font-semibold text-school-blue leading-snug mb-2 group-hover:text-school-blue-light transition-colors">
           {item.title}
         </h3>
         <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-4">
           {item.summary}
         </p>
-        <button className="flex items-center gap-1.5 text-school-amber text-sm font-semibold hover:gap-2.5 transition-all duration-200 self-start">
+        <button className="flex items-center gap-1.5 text-school-red text-sm font-semibold hover:gap-2.5 transition-all duration-200 self-start">
           Read More
           <ArrowRight className="w-4 h-4" />
         </button>

@@ -59,7 +59,6 @@ export default function ContactForm() {
       setErrors(validationErrors);
       return;
     }
-    // Map form fields to backend: subject = currentClass, message = question
     submitMessage(
       {
         name: form.name,
@@ -83,10 +82,10 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="bg-white rounded-sm shadow-card p-10 text-center">
-        <div className="w-16 h-16 rounded-full bg-school-indigo/10 flex items-center justify-center mx-auto mb-5">
-          <CheckCircle className="w-8 h-8 text-school-indigo" />
+        <div className="w-16 h-16 rounded-full bg-school-blue/10 flex items-center justify-center mx-auto mb-5">
+          <CheckCircle className="w-8 h-8 text-school-blue" />
         </div>
-        <h3 className="font-serif text-2xl font-bold text-school-indigo mb-3">
+        <h3 className="font-serif text-2xl font-bold text-school-blue mb-3">
           Message Sent!
         </h3>
         <p className="text-muted-foreground mb-6 max-w-sm mx-auto">
@@ -94,7 +93,7 @@ export default function ContactForm() {
         </p>
         <Button
           onClick={() => setSubmitted(false)}
-          className="bg-school-indigo text-white hover:bg-school-indigo/90 rounded-sm font-semibold"
+          className="bg-school-blue text-white hover:bg-school-blue/90 rounded-sm font-semibold"
         >
           Send Another Message
         </Button>
@@ -106,7 +105,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="bg-white rounded-sm shadow-card p-8 space-y-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="space-y-1.5">
-          <Label htmlFor="name" className="text-school-indigo font-medium text-sm">
+          <Label htmlFor="name" className="text-school-blue font-medium text-sm">
             Name <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -120,7 +119,7 @@ export default function ContactForm() {
           {errors.name && <p className="text-destructive text-xs">{errors.name}</p>}
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="currentClass" className="text-school-indigo font-medium text-sm">
+          <Label htmlFor="currentClass" className="text-school-blue font-medium text-sm">
             Current Class <span className="text-destructive">*</span>
           </Label>
           <Input
@@ -136,7 +135,7 @@ export default function ContactForm() {
       </div>
 
       <div className="space-y-1.5">
-        <Label htmlFor="email" className="text-school-indigo font-medium text-sm">
+        <Label htmlFor="email" className="text-school-blue font-medium text-sm">
           Email <span className="text-destructive">*</span>
         </Label>
         <Input
@@ -152,7 +151,7 @@ export default function ContactForm() {
       </div>
 
       <div className="space-y-1.5">
-        <Label htmlFor="question" className="text-school-indigo font-medium text-sm">
+        <Label htmlFor="question" className="text-school-blue font-medium text-sm">
           Your Question <span className="text-destructive">*</span>
         </Label>
         <Textarea
@@ -170,7 +169,7 @@ export default function ContactForm() {
       <Button
         type="submit"
         disabled={isPending}
-        className="w-full bg-school-indigo text-white hover:bg-school-indigo/90 rounded-sm font-semibold py-5"
+        className="w-full bg-school-blue text-white hover:bg-school-blue/90 rounded-sm font-semibold py-5"
       >
         {isPending ? (
           <>

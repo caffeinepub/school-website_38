@@ -8,38 +8,38 @@
   :root {
     --radius: 0.5rem;
 
-    /* Electric Indigo/Violet + Bright Amber/Orange palette */
-    --background: 0.98 0.004 280;
-    --foreground: 0.12 0.04 270;
+    /* Water Blue + Red palette */
+    --background: 0.98 0.008 210;
+    --foreground: 0.12 0.03 220;
 
     --card: 1 0 0;
-    --card-foreground: 0.12 0.04 270;
+    --card-foreground: 0.12 0.03 220;
 
     --popover: 1 0 0;
-    --popover-foreground: 0.12 0.04 270;
+    --popover-foreground: 0.12 0.03 220;
 
-    /* Electric indigo/violet */
-    --primary: 0.38 0.18 275;
-    --primary-foreground: 0.98 0.004 280;
+    /* Water blue primary */
+    --primary: 0.42 0.13 220;
+    --primary-foreground: 0.98 0.008 210;
 
-    /* Light violet tint */
-    --secondary: 0.94 0.03 275;
-    --secondary-foreground: 0.25 0.1 275;
+    /* Light blue tint */
+    --secondary: 0.93 0.04 215;
+    --secondary-foreground: 0.25 0.10 220;
 
     /* Muted */
-    --muted: 0.94 0.02 280;
-    --muted-foreground: 0.52 0.04 270;
+    --muted: 0.94 0.02 215;
+    --muted-foreground: 0.52 0.04 220;
 
-    /* Bright amber/orange accent */
-    --accent: 0.75 0.18 55;
-    --accent-foreground: 0.12 0.04 270;
+    /* Red accent */
+    --accent: 0.50 0.20 25;
+    --accent-foreground: 0.98 0.008 210;
 
     --destructive: 0.577 0.245 27.325;
     --destructive-foreground: 0.985 0 0;
 
-    --border: 0.88 0.02 275;
-    --input: 0.88 0.02 275;
-    --ring: 0.38 0.18 275;
+    --border: 0.88 0.02 215;
+    --input: 0.88 0.02 215;
+    --ring: 0.42 0.13 220;
 
     --chart-1: 0.646 0.222 41.116;
     --chart-2: 0.6 0.118 184.704;
@@ -58,33 +58,33 @@
   }
 
   .dark {
-    --background: 0.12 0.04 270;
-    --foreground: 0.95 0.01 280;
+    --background: 0.12 0.04 220;
+    --foreground: 0.95 0.01 215;
 
-    --card: 0.16 0.05 270;
-    --card-foreground: 0.95 0.01 280;
+    --card: 0.16 0.05 220;
+    --card-foreground: 0.95 0.01 215;
 
-    --popover: 0.18 0.05 270;
-    --popover-foreground: 0.95 0.01 280;
+    --popover: 0.18 0.05 220;
+    --popover-foreground: 0.95 0.01 215;
 
-    --primary: 0.75 0.18 55;
-    --primary-foreground: 0.12 0.04 270;
+    --primary: 0.60 0.13 220;
+    --primary-foreground: 0.12 0.04 220;
 
-    --secondary: 0.22 0.05 270;
-    --secondary-foreground: 0.95 0.01 280;
+    --secondary: 0.22 0.05 220;
+    --secondary-foreground: 0.95 0.01 215;
 
-    --muted: 0.22 0.05 270;
-    --muted-foreground: 0.65 0.03 275;
+    --muted: 0.22 0.05 220;
+    --muted-foreground: 0.65 0.03 215;
 
-    --accent: 0.75 0.18 55;
-    --accent-foreground: 0.12 0.04 270;
+    --accent: 0.55 0.20 25;
+    --accent-foreground: 0.12 0.04 220;
 
     --destructive: 0.704 0.191 22.216;
     --destructive-foreground: 0.205 0 0;
 
     --border: 1 0 0 / 10%;
     --input: 1 0 0 / 15%;
-    --ring: 0.75 0.18 55;
+    --ring: 0.60 0.13 220;
 
     --sidebar: 0.205 0 0;
     --sidebar-foreground: 0.985 0 0;
@@ -111,20 +111,24 @@
 
 @layer components {
   .section-heading {
-    @apply font-serif text-3xl md:text-4xl font-bold text-school-indigo leading-tight;
+    @apply font-serif text-3xl md:text-4xl font-bold text-school-blue leading-tight;
   }
 
   .section-subheading {
-    @apply font-serif text-xl md:text-2xl font-semibold text-school-indigo-dark leading-snug;
+    @apply font-serif text-xl md:text-2xl font-semibold text-school-blue-dark leading-snug;
   }
 
+  .red-divider {
+    @apply w-16 h-1 bg-school-red rounded-full my-3;
+  }
+
+  /* Legacy aliases for backward compat */
   .amber-divider {
-    @apply w-16 h-1 bg-school-amber rounded-full my-3;
+    @apply w-16 h-1 bg-school-red rounded-full my-3;
   }
 
-  /* Legacy alias for backward compat */
   .gold-divider {
-    @apply w-16 h-1 bg-school-amber rounded-full my-3;
+    @apply w-16 h-1 bg-school-red rounded-full my-3;
   }
 
   .card-hover {

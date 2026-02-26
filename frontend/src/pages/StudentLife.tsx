@@ -17,24 +17,24 @@ const activities = [
     title: 'Arts & Culture',
     description: 'Participate in our annual fest, join the drama club, or showcase your artistic skills. Express yourself and discover your creative potential.',
     tags: ['Annual Fest', 'Drama Club', 'Visual Arts', 'Music'],
-    color: 'bg-amber-50 border-amber-200',
-    tagColor: 'bg-amber-100 text-amber-700',
+    color: 'bg-school-red/5 border-school-red/20',
+    tagColor: 'bg-school-red/10 text-school-red',
   },
   {
     emoji: '💻',
     title: 'Tech & Coding Club',
     description: 'Learn to build apps, websites, and dive into the world of robotics. Collaborate with fellow tech enthusiasts and bring your ideas to life.',
     tags: ['App Development', 'Web Design', 'Robotics', 'AI & ML'],
-    color: 'bg-blue-50 border-blue-200',
-    tagColor: 'bg-blue-100 text-blue-700',
+    color: 'bg-school-blue/5 border-school-blue/20',
+    tagColor: 'bg-school-blue/10 text-school-blue',
   },
   {
     emoji: '🗣️',
     title: 'Debate & Model UN',
     description: 'Find your voice and learn how to argue your points effectively. Develop public speaking skills and master the art of argumentation.',
     tags: ['Debate', 'Model UN', 'Public Speaking', 'Leadership'],
-    color: 'bg-purple-50 border-purple-200',
-    tagColor: 'bg-purple-100 text-purple-700',
+    color: 'bg-school-blue/5 border-school-blue/20',
+    tagColor: 'bg-school-blue/10 text-school-blue-dark',
   },
 ];
 
@@ -42,15 +42,15 @@ export default function StudentLife() {
   return (
     <div>
       {/* Page Header */}
-      <section className="bg-school-indigo py-20 relative overflow-hidden">
+      <section className="bg-school-blue py-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-school-amber translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-school-red translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-white -translate-x-1/2 translate-y-1/2" />
         </div>
         <div className="container mx-auto px-6 relative">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-6 h-0.5 bg-school-amber" />
-            <span className="text-school-amber text-sm font-medium tracking-widest uppercase">Student Life</span>
+            <div className="w-6 h-0.5 bg-school-red" />
+            <span className="text-school-red-light text-sm font-medium tracking-widest uppercase">Student Life</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
             Beyond the Classroom.
@@ -67,7 +67,7 @@ export default function StudentLife() {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-heading mb-4">Get Involved</h2>
-            <div className="amber-divider mx-auto" />
+            <div className="red-divider mx-auto" />
             <p className="text-muted-foreground leading-relaxed mt-6 text-base">
               From the cricket field to the debate stage, from the art room to the coding lab — there's a place
               for every passion at Doon's Public School. Explore our clubs, teams, and activities and find where
@@ -88,7 +88,7 @@ export default function StudentLife() {
               >
                 <CardContent className="p-8">
                   <div className="text-5xl mb-5">{activity.emoji}</div>
-                  <h3 className="font-serif text-2xl font-bold text-school-indigo mb-3">{activity.title}</h3>
+                  <h3 className="font-serif text-2xl font-bold text-school-blue mb-3">{activity.title}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-5">{activity.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {activity.tags.map((tag) => (
@@ -108,34 +108,23 @@ export default function StudentLife() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-school-amber">
+      <section className="py-16 bg-school-red">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-school-indigo-dark mb-4">
-            Ready to Find Your Passion?
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Get Involved?
           </h2>
-          <p className="text-school-indigo-dark/80 max-w-xl mx-auto mb-8">
-            Join Doon's Public School and discover a world of opportunities waiting for you — both inside and outside the classroom.
+          <p className="text-white/80 max-w-xl mx-auto mb-8">
+            Explore all the ways you can make your school experience truly unforgettable.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/admissions">
-              <Button
-                size="lg"
-                className="bg-school-indigo text-white hover:bg-school-indigo/90 font-bold px-10 rounded-sm"
-              >
-                Apply Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-school-indigo-dark text-school-indigo-dark hover:bg-school-indigo-dark hover:text-white font-bold px-10 rounded-sm"
-              >
-                Ask Us Anything
-              </Button>
-            </Link>
-          </div>
+          <Link to="/admissions">
+            <Button
+              size="lg"
+              className="bg-white text-school-red hover:bg-school-blue-50 font-bold px-10 rounded-sm"
+            >
+              Join Doon's Today
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
