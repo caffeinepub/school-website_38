@@ -1,0 +1,148 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Populate all pages with Doon's Public School content (Homepage, About, Admissions, Academics, Student Life, Contact)",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Update Homepage with Doon's Public School branded content including hero section, About Us snapshot, News & Announcements preview, and Student Testimonials",
+      "acceptanceCriteria": [
+        "Hero section displays the headline 'Welcome to Doon's Public School!' and the Patna sub-headline",
+        "Two CTA buttons 'Explore Campus Life' and 'Apply Today' are visible in the hero",
+        "About Us snapshot paragraph is shown on the homepage",
+        "Three news/announcement placeholder items are displayed",
+        "Two student testimonial quotes with attributions are displayed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Replace the hero section headline with 'Welcome to Doon's Public School!' and sub-headline with 'Discover your passion, build your skills, and shape your future right here in the heart of Patna.' Update the two CTA buttons to read 'Explore Campus Life' (linking to /student-life) and 'Apply Today' (linking to /admissions). Replace the About Us section text with the provided Doon's Public School narrative. Update the News & Announcements preview section to display three specific placeholder items: 'Upcoming Event: Annual Sports Meet Registration is Open!', 'Notice: Term 1 Examination Schedules Released.', and 'Highlight: Congratulations to the Debate Team for winning the City Championship!' Add a Student Testimonials section with two quotes: one from Rahul K., Class 12 about leadership and teacher support, and one from Sneha P., Class 10 about school activities and friendships. Use the generated hero banner image at frontend/public/assets/generated/hero-banner.dim_1440x600.png for the hero section background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Update footer with Doon's Public School contact details and social media icon placeholders",
+      "acceptanceCriteria": [
+        "Footer shows the Kankarbagh, Patna address",
+        "Footer shows phone number and email placeholders",
+        "Footer includes social media icon placeholders"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Update the footer section to display Doon's Public School contact information: address '📍 Chitragupt Nagar, Kankarbagh, Patna - 20', phone '📞 [Insert Phone Number]', email '✉️ [Insert Email Address]'. Add social media icon placeholders for Facebook, Instagram, Twitter/X, and YouTube using appropriate icons from lucide-react or similar library. Maintain the existing footer structure and styling while replacing the contact content."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Update About Us page with Doon's Public School story, mission, core values, and principal's message",
+      "acceptanceCriteria": [
+        "About page displays 'Our Story' section with Kankarbagh narrative",
+        "Mission statement is displayed",
+        "Four core values (Curiosity, Respect, Integrity, Excellence) are listed",
+        "Principal's message is displayed in full"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/About.tsx",
+          "operation": "modify",
+          "description": "Replace the existing About page content with Doon's Public School specific content. Add 'Our Story' section describing the school's location in Kankarbagh and its founding goals. Add 'Our Mission' section with the text: 'To empower every student with the knowledge, character, and confidence to succeed in a changing world.' Add 'Our Core Values' section listing: Curiosity, Respect, Integrity, and Excellence, each with appropriate descriptions. Add 'Message from the Principal' section with the full welcome message starting with 'Welcome, students! High school is one of the most exciting chapters of your life...' (include complete text as provided in BuildRequest). Use the generated about image at frontend/public/assets/generated/about-image.dim_800x500.png in an appropriate section. Maintain existing card-based layout and styling patterns."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Create new Admissions page with application journey steps and download CTA, and wire it into the app navigation",
+      "acceptanceCriteria": [
+        "Navigating to /admissions renders the Admissions page",
+        "Page shows the 4-step application journey",
+        "'Download Admission Form' CTA button is present",
+        "'Admissions' link appears in the navigation bar"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Admissions.tsx",
+          "operation": "create",
+          "description": "Create a new Admissions page component with headline 'Ready to Join the Doon's Family?' and body copy explaining the admission process at Doon's Public School. Include a 'Your Application Journey' section with four numbered steps: (1) Say Hello - Contact the school or schedule a visit, (2) Take a Tour - Visit campus and meet teachers, (3) Submit Your Application - Fill out and submit the admission form, (4) Meet & Greet - Attend an interview or orientation session. Add a prominent CTA button labelled 'Download Admission Form' that triggers a download action. Use consistent styling with other pages including card components, gradients, and the school's indigo/amber color scheme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route for '/admissions' that renders the Admissions page component. Import the Admissions component at the top of the file and register the route in the router configuration alongside existing routes like Home, About, Academics, etc."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add an 'Admissions' navigation link to the main navigation bar. Position it logically between existing links (e.g., between 'About' and 'Academics'). Ensure the link uses the NavLink component or similar for active state highlighting and points to '/admissions'. Update both desktop and mobile navigation menus."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Update Academics page with new headline and focus area descriptions for Science & Tech, Humanities & Commerce, and Exam Prep",
+      "acceptanceCriteria": [
+        "Academics page headline reads 'Learn, Challenge, Grow.'",
+        "Three focus area cards for Science & Tech, Humanities & Commerce, and Exam Prep are displayed with correct descriptions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Academics.tsx",
+          "operation": "modify",
+          "description": "Update the page headline to 'Learn, Challenge, Grow.' and replace the body copy with text about interactive learning at Doon's Public School. Update the three focus area cards to: (1) 'Science & Tech' with description 'Fully equipped physics, chemistry, biology, and computer labs for hands-on learning and experimentation.', (2) 'Humanities & Commerce' with description 'Building critical thinkers and future entrepreneurs through comprehensive arts and commerce programs.', (3) 'Exam Prep' with description 'Special guidance and doubt-clearing sessions to help students ace board exams with confidence.' Maintain the existing DepartmentCard component structure and styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Create new Student Life & Extracurriculars page with activity cards and wire it into the app navigation",
+      "acceptanceCriteria": [
+        "Navigating to /student-life renders the Student Life page",
+        "Four extracurricular activity cards are shown with emoji icons and correct descriptions",
+        "'Student Life' link appears in the navigation bar"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/StudentLife.tsx",
+          "operation": "create",
+          "description": "Create a new Student Life page component with headline 'Beyond the Classroom.' and body copy about vibrant student life at Doon's Public School. Display four activity cards with emoji icons: ⚽ Sports (description: 'Join the cricket, football, or basketball teams and compete at district and state levels'), 🎨 Arts & Culture (description: 'Participate in the annual fest, drama club, and develop your artistic skills'), 💻 Tech & Coding Club (description: 'Build apps, websites, and explore robotics with fellow tech enthusiasts'), 🗣️ Debate & Model UN (description: 'Develop public speaking skills and master the art of argumentation'). Use card-based layout consistent with other pages and the school's visual theme."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route for '/student-life' that renders the StudentLife page component. Import the StudentLife component at the top of the file and register the route in the router configuration."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add a 'Student Life' navigation link to the main navigation bar. Position it logically in the navigation sequence (e.g., after 'Academics'). Ensure the link points to '/student-life' and is present in both desktop and mobile navigation menus with proper active state styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Update Contact page with Doon's Public School specific content including updated headline, address, office hours, and form fields",
+      "acceptanceCriteria": [
+        "Contact page headline reads 'We're Here to Help.'",
+        "Address and office hours are displayed correctly",
+        "Contact form has Name, Current Class, Email, and Your Question fields",
+        "'Send Message' button submits the form"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Contact.tsx",
+          "operation": "modify",
+          "description": "Update the page headline to 'We're Here to Help.' and replace the body copy with: 'Have a question about admissions, subject choices, or school events? Drop us a message or visit us on campus!' Update the displayed contact information to show address 'Doon's Public School, Chitragupt Nagar, Kankarbagh, Patna - 20' and office hours 'Monday to Saturday, 8:00 AM – 3:00 PM'. Maintain the existing ContactForm component integration and layout structure."
+        },
+        {
+          "path": "frontend/src/components/ContactForm.tsx",
+          "operation": "modify",
+          "description": "Update the contact form fields to match Doon's Public School requirements: Name, Current Class (dropdown or text input for class level), Email, and Your Question (textarea). Update field labels and placeholders accordingly. Change the submit button text to 'Send Message'. Update form validation to handle the new 'Current Class' field. Ensure the form continues to use the existing backend submission via the submitContactMessage mutation hook, mapping the new fields appropriately (Current Class can be included in the message or subject field)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "kind": "build_request",
+  "title": "Populate all pages with Doon's Public School content (Homepage, About, Admissions, Academics, Student Life, Contact)",
+  "projectName": "Doon's Public School",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Update the Homepage (frontend/src/pages/Home.tsx) with the following Doon's Public School content: Hero headline 'Welcome to Doon's Public School!', sub-headline 'Discover your passion, build your skills, and shape your future right here in the heart of Patna.', two CTA buttons labelled 'Explore Campus Life' and 'Apply Today'. Add an About Us snapshot section with the text: 'At Doon's Public School, we believe high school is more than just textbooks. We are a community dedicated to helping you discover what you're good at, supporting you through challenges, and preparing you for whatever comes next.' Add a News & Announcements preview section showing three placeholder items: 'Upcoming Event: Annual Sports Meet Registration is Open!', 'Notice: Term 1 Examination Schedules Released.', 'Highlight: Congratulations to the Debate Team for winning the City Championship!' Add a Student Testimonials section with two quotes: '\"Doon's gave me the confidence to lead. The teachers here don't just teach; they actually listen.\" – Rahul K., Class 12' and '\"From the science labs to the football field, there's always something exciting happening here. I've found my best friends at this school.\" – Sneha P., Class 10'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Hero Headline: Welcome to Doon's Public School!",
+          "Sub-headline: Discover your passion, build your skills, and shape your future right here in the heart of Patna.",
+          "Primary Call to Action (CTA) Button: [Explore Campus Life] or [Apply Today]",
+          "About Us Snapshot: At Doon's Public School, we believe high school is more than just textbooks.",
+          "Student Testimonials"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section displays the headline 'Welcome to Doon's Public School!' and the Patna sub-headline",
+        "Two CTA buttons 'Explore Campus Life' and 'Apply Today' are visible in the hero",
+        "About Us snapshot paragraph is shown on the homepage",
+        "Three news/announcement placeholder items are displayed",
+        "Two student testimonial quotes with attributions are displayed"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Update the footer in frontend/src/components/Layout.tsx with Doon's Public School contact details: address '📍 Chitragupt Nagar, Kankarbagh, Patna - 20', phone '📞 [Insert Phone Number]', email '✉️ [Insert Email Address]', and social media icon placeholders (Facebook, Instagram, Twitter/X, YouTube).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "📍 Chitragupt Nagar, Kankarbagh, Patna - 20",
+          "📞 [Insert Phone Number]",
+          "✉️ [Insert Email Address]",
+          "📱 [Social Media Icons]"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer shows the Kankarbagh, Patna address",
+        "Footer shows phone number and email placeholders",
+        "Footer includes social media icon placeholders"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Update the About Us page (frontend/src/pages/About.tsx) with the following content: 'Our Story' section with the text about Kankarbagh and the school's founding goal. 'Our Mission' section: 'To empower every student with the knowledge, character, and confidence to succeed in a changing world.' 'Our Core Values' section listing: Curiosity, Respect, Integrity, and Excellence. A 'Message from the Principal' section with the full principal's message: 'Welcome, students! High school is one of the most exciting chapters of your life...' (full text as provided).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Our Story: Located in the vibrant neighborhood of Kankarbagh",
+          "Our Mission: To empower every student",
+          "Our Core Values: Curiosity, Respect, Integrity, and Excellence",
+          "Message from the Principal"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page displays 'Our Story' section with Kankarbagh narrative",
+        "Mission statement is displayed",
+        "Four core values (Curiosity, Respect, Integrity, Excellence) are listed",
+        "Principal's message is displayed in full"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Create a new Admissions page at frontend/src/pages/Admissions.tsx with: Headline 'Ready to Join the Doon's Family?', body copy about the admission process, a 4-step 'Your Application Journey' section (1. Say Hello, 2. Take a Tour, 3. Submit Your Application, 4. Meet & Greet), and a prominent CTA button labelled 'Download Admission Form'. Add an /admissions route to frontend/src/App.tsx and a 'Admissions' link to the navigation bar in frontend/src/components/Layout.tsx.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Headline: Ready to Join the Doon's Family?",
+          "Your Application Journey",
+          "CTA Button: [Download Admission Form]"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigating to /admissions renders the Admissions page",
+        "Page shows the 4-step application journey",
+        "'Download Admission Form' CTA button is present",
+        "'Admissions' link appears in the navigation bar"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Update the Academics page (frontend/src/pages/Academics.tsx) with the headline 'Learn, Challenge, Grow.' and new body copy about interactive learning. Update the three focus area cards to: (1) 'Science & Tech' – Fully equipped physics, chemistry, biology, and computer labs. (2) 'Humanities & Commerce' – Building critical thinkers and future entrepreneurs. (3) 'Exam Prep' – Special guidance and doubt-clearing sessions to help ace board exams with confidence.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Headline: Learn, Challenge, Grow.",
+          "Science & Tech: Fully equipped physics, chemistry, biology, and computer labs.",
+          "Humanities & Commerce: Building critical thinkers and future entrepreneurs.",
+          "Exam Prep: Special guidance and doubt-clearing sessions"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Academics page headline reads 'Learn, Challenge, Grow.'",
+        "Three focus area cards for Science & Tech, Humanities & Commerce, and Exam Prep are displayed with correct descriptions"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Create a new Student Life & Extracurriculars page at frontend/src/pages/StudentLife.tsx with: Headline 'Beyond the Classroom.', body copy about school life, and four activity cards: ⚽ Sports (cricket, football, basketball at district/state levels), 🎨 Arts & Culture (annual fest, drama club, artistic skills), 💻 Tech & Coding Club (apps, websites, robotics), 🗣️ Debate & Model UN (public speaking, argumentation). Add a /student-life route to frontend/src/App.tsx and a 'Student Life' link to the navigation bar in frontend/src/components/Layout.tsx.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Headline: Beyond the Classroom.",
+          "⚽ Sports: Join the cricket, football, or basketball teams",
+          "🎨 Arts & Culture",
+          "💻 Tech & Coding Club",
+          "🗣️ Debate & Model UN"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigating to /student-life renders the Student Life page",
+        "Four extracurricular activity cards are shown with emoji icons and correct descriptions",
+        "'Student Life' link appears in the navigation bar"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Update the Contact page (frontend/src/pages/Contact.tsx) with: Headline 'We're Here to Help.', body copy 'Have a question about admissions, subject choices, or school events? Drop us a message or visit us on campus!', address 'Doon's Public School, Chitragupt Nagar, Kankarbagh, Patna - 20', office hours 'Monday to Saturday, 8:00 AM – 3:00 PM'. Update the contact form fields to: Name, Current Class, Email, Your Question, with a 'Send Message' submit button.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Headline: We're Here to Help.",
+          "Contact Form Fields: [Name] [Current Class] [Email] [Your Question]",
+          "Office Hours: Monday to Saturday, 8:00 AM – 3:00 PM",
+          "Address: Doon's Public School, Chitragupt Nagar, Kankarbagh, Patna - 20"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page headline reads 'We're Here to Help.'",
+        "Address and office hours are displayed correctly",
+        "Contact form has Name, Current Class, Email, and Your Question fields",
+        "'Send Message' button submits the form"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files listed in frontend.immutablePaths",
+    "Keep all Motoko logic in backend/main.mo",
+    "Preserve the existing Internet Identity authentication and admin portal functionality",
+    "Maintain the current indigo/amber visual theme"
+  ],
+  "nonGoals": [
+    "Changing the backend data schema or adding new backend endpoints",
+    "Modifying the admin portal functionality",
+    "Changing the visual color theme or typography"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

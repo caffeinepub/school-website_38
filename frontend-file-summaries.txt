@@ -1,0 +1,18 @@
+{
+  "frontend/src/index.css": "Global styles with Playfair Display serif font for headings, Inter sans-serif for body, and a deep forest green + warm gold/cream OKLCH color system with utility classes for section headings, gold dividers, and card hover effects.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Playfair Display serif and Inter sans-serif fonts, school-green and school-gold custom color palettes with full shade scales, custom card shadows, and fade-in animation keyframes.",
+  "frontend/src/App.tsx": "Main app with TanStack Router defining routes for Home, About, Admissions, Academics, StudentLife, News, Contact, and Admin pages, all wrapped in the Layout component.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations: fetching all news, fetching news by ID, getting contact info, submitting contact messages, and adding news items.",
+  "frontend/src/components/Layout.tsx": "Full-page layout shell with Doon's Public School branding, updated navigation including Admissions and Student Life links, updated footer with Kankarbagh Patna address and placeholder contact details.",
+  "frontend/src/pages/Home.tsx": "Homepage for Doon's Public School with hero banner, stats bar, About Us snapshot, News & Announcements section with three placeholder items, student testimonials from Rahul K. and Sneha P., and a CTA banner.",
+  "frontend/src/pages/About.tsx": "About Us page with Doon's Public School story, mission statement, four core values (Curiosity, Respect, Integrity, Excellence), and the principal's full welcome message.",
+  "frontend/src/pages/Academics.tsx": "Academics page with headline \"Learn, Challenge, Grow.\" and three focus area cards for Science & Tech, Humanities & Commerce, and Exam Prep with correct descriptions.",
+  "frontend/src/pages/News.tsx": "News page that fetches all news items from the backend, displays them in a searchable grid using NewsCard components, with loading skeletons and empty states.",
+  "frontend/src/pages/Contact.tsx": "Contact page with headline \"We're Here to Help.\", Doon's Public School address (Chitragupt Nagar, Kankarbagh, Patna - 20), office hours (Monday–Saturday 8AM–3PM), and the updated ContactForm component.",
+  "frontend/src/components/StaffCard.tsx": "Reusable staff card with initials avatar, name, role, department badge, and bio with hover color transition on the avatar.",
+  "frontend/src/components/DepartmentCard.tsx": "Reusable department card showing icon, title, description, and a list of key courses with chevron bullets.",
+  "frontend/src/components/NewsCard.tsx": "Reusable news card with cycling placeholder images, formatted date, title, summary, and animated Read More link.",
+  "frontend/src/components/ContactForm.tsx": "Contact form updated with Name, Current Class, Email, and Your Question fields, with validation and backend submission mapping Current Class to subject and question to message.",
+  "frontend/src/pages/Admissions.tsx": "New Admissions page with headline \"Ready to Join the Doon's Family?\", four-step application journey cards, documents required checklist, and a Download Admission Form CTA button.",
+  "frontend/src/pages/StudentLife.tsx": "New Student Life page with headline \"Beyond the Classroom.\" and four extracurricular activity cards for Sports, Arts & Culture, Tech & Coding Club, and Debate & Model UN with emoji icons and tags."
+}
